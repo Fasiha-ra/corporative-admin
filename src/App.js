@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SignUp from "./Components/Auth";
+import { GlobalStyles } from "./Components/Global.styles";
+import OTP from "./Components/Auth/OTP";
+import Password from "./Components/Auth/Password";
+import { AuthProvider } from "./Components/Context/Context";
+import UploadProfile from "./Components/Auth/UploadProfile";
+import AdminLayout from "./Components/adminLayout";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+    <BrowserRouter>
+    <GlobalStyles/>
+      <Routes>
+       <Route index element={<SignUp />} />
+        <Route path="/password" element={<Password />} />
+       <Route path="/otp" element={<OTP />} />
+        <Route path="/UploadProfile" element={<UploadProfile />} />
+       <Route path="/dash" element={<AdminLayout />}></Route> 
+       
+      </Routes>
+    </BrowserRouter>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
