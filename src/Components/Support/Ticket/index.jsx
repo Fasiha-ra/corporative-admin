@@ -1,6 +1,6 @@
 import React from "react";
 import { TicketsWrap } from "./Tickets.styles";
-import { TicketData } from "../../../Constant/Data";
+import { TicketData } from "../../Constant/Data";
 import Button from "../../Button";
 const Tickets = ({title, type, width, name, click = () => {} }) => {
   return (

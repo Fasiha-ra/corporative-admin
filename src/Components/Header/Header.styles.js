@@ -90,11 +90,14 @@ export const ToggleButton = styled.button`
   display: none;
   background: none;
   border: none;
-  color: green;
+  color: black;
+  border: 1px solid var(--gray-30);
+  padding: 5px 5px 0 5px;
   font-size: 1.5rem;
   cursor: pointer;
 
   @media (max-width: 992px) {
     display: block;
+    font-size: 16px;
   }
 `;

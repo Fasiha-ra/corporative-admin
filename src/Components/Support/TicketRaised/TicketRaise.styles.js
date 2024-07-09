@@ -68,4 +68,7 @@ export const TicketRaisedWrap = styled.div`
       justify-content: end;
     }
   }
+  .emailWrapper{
+    border-radius: 0;
+  }
 `;

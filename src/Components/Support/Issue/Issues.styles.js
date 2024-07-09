@@ -15,6 +15,7 @@ export const IssuesWrap= styled.div`
         grid-template-columns: repeat(4, 1fr);
     }
     .card{
+      cursor: pointer;
         background-color: var(--white);
       border-radius: 25px;
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);

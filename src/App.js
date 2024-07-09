@@ -7,6 +7,8 @@ import Password from "./Components/Auth/Password";
 import { AuthProvider } from "./Components/Context/Context";
 import UploadProfile from "./Components/Auth/UploadProfile";
 import AdminLayout from "./Components/adminLayout";
+import SupportSec from "./Components/Support";
+import CompanyProfile from "./Components/CompanyProfile";
 
 const App = () => {
   return (
@@ -18,7 +20,11 @@ const App = () => {
         <Route path="/password" element={<Password />} />
        <Route path="/otp" element={<OTP />} />
         <Route path="/UploadProfile" element={<UploadProfile />} />
-       <Route path="/dash" element={<AdminLayout />}></Route> 
+      
+       <Route path="/" element={<AdminLayout />}>
+       <Route path="/support" element={<SupportSec/>}/>
+       <Route path="/CompanyProfile" element={<CompanyProfile/>}/>
+       </Route> 
        
       </Routes>
     </BrowserRouter>

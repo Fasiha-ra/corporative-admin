@@ -3,9 +3,6 @@ export const SidebarWrap = styled.div`
   height: calc(100vh - 134px);
   overflow: hidden;
   position: relative;
-  background-color: var(--white);
-  border-radius: 25px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
   padding: 20px 20px;
   &:hover {
     overflow-y: auto;
@@ -41,39 +38,23 @@ export const SidebarWrap = styled.div`
           display: flex;
           gap: 20px;
           align-items: center;
-          padding-bottom: 20px;
           img{
             width: 31px;
             height: 31px;
           }
+          transition: all .3s ease;
+          &:hover{
+            color: var(--blue);
+          }
           &.active {
-          border-bottom: 1px solid var(--black); 
+          background-color :var(--blue);
+          color: var(--white);
+          padding: 10px 0 10px 10px;
+          border-radius: 12px;
         }
         }
       }
     }
   }
-  .customwrapper{
-    width: 300px;
-  }
-  .btn, .calendar{
-    margin-bottom: 20px;
-}
-.dropdown{
-  strong{
-    display: block;
-    cursor: pointer;
-    margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  span{
-    display: block;
-    margin-bottom: 10px;
-  }
-}
+  
 `;

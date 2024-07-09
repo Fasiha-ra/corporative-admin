@@ -3,24 +3,36 @@ import { SupportWrap } from "./Support.styles";
 import Tickets from "./Ticket";
 import Issues from "./Issue";
 import TicketRaised from "./TicketRaised";
+import RaiseTicket from "./TicketRaised/RaiseTicket";
 
 const SupportSec = () => {
   const [ticket, setTicket] = useState(false);
+  const [raise, setRaise] = useState(false);
+  const isOpen = () =>{
+    setRaise(true);
+  }
   const clickHandler = () => {
     setTicket(true);
   };
   const backPage = () =>{
     setTicket(false);
+    setRaise(false);
   }
   return (
     <SupportWrap>
-      {!ticket ? (
+      {ticket ? (
+        <div className="raised">
+          <TicketRaised backPage={backPage} />
+        </div>
+      ):raise?(<div className="raised">
+        < RaiseTicket backPage={backPage} />
+      </div>) :(
         <div className="wrapper">
           <div className="activeTicket support">
             <Tickets width="186px" name="Close Ticket" title="Active Tickets" click={clickHandler}/>
           </div>
           <div className="issuesHolder support">
-            <Issues />
+            <Issues click={isOpen} />
           </div>
           <div className="resolveTicke supportt">
             <Tickets
@@ -30,11 +42,7 @@ const SupportSec = () => {
             />
           </div>
         </div>
-      ) : (
-        <div className="raised">
-          <TicketRaised backPage={backPage} />
-        </div>
-      )}
+      ) }
     </SupportWrap>
   );
 };
