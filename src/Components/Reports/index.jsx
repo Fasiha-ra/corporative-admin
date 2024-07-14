@@ -1,17 +1,19 @@
-import React from 'react'
-import { ReportWrap } from './Reporst.styles'
-import ReportsHeader from './ReportsHeader'
-import SessionAnalysis from './SessionAnalysis'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { ReportWrap } from "./Reports.styles";
+import ReportsHeader from "./ReportsHeader";
 
 const Reports = () => {
   return (
     <ReportWrap>
-        <div className="header">
-            <ReportsHeader/>
-            <SessionAnalysis/>
-        </div>
+      <div className="header">
+        <ReportsHeader />
+      </div>
+      <div className="content">
+        <Outlet />
+      </div>
     </ReportWrap>
-  )
-}
+  );
+};
 
-export default Reports
+export default Reports;

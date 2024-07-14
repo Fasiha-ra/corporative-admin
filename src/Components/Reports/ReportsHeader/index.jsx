@@ -14,12 +14,12 @@ const ReportsHeader = () => {
   const [showDate, setShowDate] = useState(false);
   const [toggleDropdownType, setToggleDropdownType] = useState(false);
   const sessionTypeItems = [
-    { label: "Session Analysis", link: "#" },
-    { label: "Anonymous Forum", link: "#" },
-    { label: "Active/Inactive Employee", link: "#" },
-    { label: "Coach Feedback Analysis", link: "#" },
-    { label: "Session Feedback Analysis", link: "#" },
-    { label: "Coach Report", link: "#" },
+    { label: "Session Analysis", link: "/reports" },
+    { label: "Anonymous Forum", link: "/reports/Anonymousforum" },
+    { label: "Active/Inactive Employee", link: "/reports/ActiveInActive" },
+    { label: "Coach Feedback Analysis", link: "/reports/CoachFeedback" },
+    { label: "Session Feedback Analysis", link: "/reports/SessionFeedback" },
+    { label: "Coach Report", link: "/reports/CoachReport" },
   ];
   const toggleCalendar = () => {
     setShowCalendar(!showCalendar);

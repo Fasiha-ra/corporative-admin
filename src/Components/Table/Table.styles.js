@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+
 export const TableWrap = styled.div`
   width: 100%;
   table {
@@ -22,6 +23,8 @@ export const TableWrap = styled.div`
   table td {
     padding: 0.625em;
     text-align: center;
+    word-wrap: break-word; /* Ensures text wraps within cells */
+    overflow: hidden;
   }
 
   table th {
@@ -34,6 +37,7 @@ export const TableWrap = styled.div`
       line-height: 24px;
     }
   }
+
   table td {
     font-size: 16px;
     line-height: 20px;
@@ -44,6 +48,7 @@ export const TableWrap = styled.div`
       line-height: 24px;
     }
   }
+
   @media screen and (max-width: 600px) {
     table {
       border: 0;
@@ -74,16 +79,43 @@ export const TableWrap = styled.div`
       content: attr(data-label);
       float: left;
       font-weight: bold;
-      /* text-transform: uppercase; */
     }
+
     table td:last-child {
       border-bottom: 0;
     }
   }
+
   img {
     margin-left: auto;
     @media (min-width: 600px) {
       margin: 0 auto;
+    }
+  }
+
+  .imgWrap {
+    display: flex;
+    align-items: center; /* Ensure proper alignment */
+    justify-content: center; /* Center align image and text */
+    
+    @media (min-width: 600px) {
+      align-items: center;
+    }
+
+    img {
+      width: 50px !important;
+      height: 50px;
+      margin-top: -15px;
+      margin-right: 10px; /* Add margin between image and text */
+
+      @media (min-width: 600px) {
+        margin-top: 0;
+      }
+
+      @media (min-width: 992px) {
+        width: 100px !important;
+        height: 100px;
+      }
     }
   }
 `;

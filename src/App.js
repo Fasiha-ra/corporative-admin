@@ -1,39 +1,59 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignUp from "./Components/Auth";
 import { GlobalStyles } from "./Components/Global.styles";
-import OTP from "./Components/Auth/OTP";
-import Password from "./Components/Auth/Password";
 import { AuthProvider } from "./Components/Context/Context";
-import UploadProfile from "./Components/Auth/UploadProfile";
 import AdminLayout from "./Components/adminLayout";
 import SupportSec from "./Components/Support";
 import CompanyProfile from "./Components/CompanyProfile";
 import ForgetPass from "./Components/CompanyProfile/ChangePass/ForgetPass";
 import SubscriptionDetail from "./Components/CompanyProfile/PlanDetail";
 import Reports from "./Components/Reports";
-
+import ReportsHeader from "./Components/Reports/ReportsHeader"; // Import ReportsHeader here
+import SessionAnalysis from "./Components/Reports/SessionAnalysis"; // Import SessionAnalysis
+import AnonymousForum from "./Components/Reports/AnonymousForum"; // Import AnonymousForum
+import SignUp from "./Components/Auth";
+import OTP from "./Components/Auth/OTP";
+import Password from "./Components/Auth/Password";
+import UploadProfile from "./Components/Auth/UploadProfile";
+import CoachReport from "./Components/Reports/CoachReport";
+import SessionFeedback from "./Components/Reports/SessionFeedback";
+import CoachFeedback from "./Components/Reports/CoachFeedback";
+import ActiveInActive from "./Components/Reports/ActiveInactive";
 const App = () => {
   return (
     <AuthProvider>
-    <BrowserRouter>
-    <GlobalStyles/>
-      <Routes>
-       <Route index element={<SignUp />} />
-        <Route path="/password" element={<Password />} />
-       <Route path="/otp" element={<OTP />} />
-        <Route path="/UploadProfile" element={<UploadProfile />} />
-      
-       <Route path="/" element={<AdminLayout />}>
-       <Route path="/support" element={<SupportSec/>}/>
-       <Route path="/reports" element={<Reports/>}/>
-       <Route path="/CompanyProfile" element={<CompanyProfile/>}/>
-       <Route path="/CompanyProfile/forgot-password" element={<ForgetPass/>}/>
-       <Route path="/CompanyProfile/SubscriptionDetail" element={<SubscriptionDetail/>}/>
-       </Route> 
-       
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <GlobalStyles />
+        <Routes>
+          <Route index element={<SignUp />} />
+          <Route path="/password" element={<Password />} />
+          <Route path="/otp" element={<OTP />} />
+          <Route path="/UploadProfile" element={<UploadProfile />} />
+
+          <Route path="/" element={<AdminLayout />}>
+            <Route path="/support" element={<SupportSec />} />
+
+            <Route path="/reports" element={<Reports />}>
+              <Route index element={<SessionAnalysis />} />
+              <Route path="/reports/Anonymousforum" element={<AnonymousForum />} />
+              <Route path="/reports/CoachReport" element={<CoachReport />} />
+              <Route path="/reports/SessionFeedback" element={<SessionFeedback />} />
+              <Route path="/reports/CoachFeedback" element={<CoachFeedback />} />
+              <Route path="/reports/ActiveInActive" element={<ActiveInActive />} />
+            </Route>
+            {/* Routes for CompanyProfile */}
+            <Route path="/CompanyProfile" element={<CompanyProfile />} />
+            <Route
+              path="/CompanyProfile/forgot-password"
+              element={<ForgetPass />}
+            />
+            <Route
+              path="/CompanyProfile/SubscriptionDetail"
+              element={<SubscriptionDetail />}
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </AuthProvider>
   );
 };
