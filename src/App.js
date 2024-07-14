@@ -19,6 +19,9 @@ import CoachReport from "./Components/Reports/CoachReport";
 import SessionFeedback from "./Components/Reports/SessionFeedback";
 import CoachFeedback from "./Components/Reports/CoachFeedback";
 import ActiveInActive from "./Components/Reports/ActiveInactive";
+import AnonymousForums from "./Components/AnonymousForums";
+import Sessions from "./Components/Sessions";
+import ViewSession from "./Components/Sessions/VewSession";
 const App = () => {
   return (
     <AuthProvider>
@@ -31,16 +34,30 @@ const App = () => {
           <Route path="/UploadProfile" element={<UploadProfile />} />
 
           <Route path="/" element={<AdminLayout />}>
-            <Route path="/support" element={<SupportSec />} />
-
+           <Route path="/sessions" element={<Sessions/>}/>
+           <Route path="/sessions/ViewSession" element={<ViewSession/>}/>
+            <Route path="/AnonymousForums" element={<AnonymousForums />} />
             <Route path="/reports" element={<Reports />}>
               <Route index element={<SessionAnalysis />} />
-              <Route path="/reports/Anonymousforum" element={<AnonymousForum />} />
+              <Route
+                path="/reports/Anonymousforum"
+                element={<AnonymousForum />}
+              />
               <Route path="/reports/CoachReport" element={<CoachReport />} />
-              <Route path="/reports/SessionFeedback" element={<SessionFeedback />} />
-              <Route path="/reports/CoachFeedback" element={<CoachFeedback />} />
-              <Route path="/reports/ActiveInActive" element={<ActiveInActive />} />
+              <Route
+                path="/reports/SessionFeedback"
+                element={<SessionFeedback />}
+              />
+              <Route
+                path="/reports/CoachFeedback"
+                element={<CoachFeedback />}
+              />
+              <Route
+                path="/reports/ActiveInActive"
+                element={<ActiveInActive />}
+              />
             </Route>
+            <Route path="/support" element={<SupportSec />} />
             {/* Routes for CompanyProfile */}
             <Route path="/CompanyProfile" element={<CompanyProfile />} />
             <Route

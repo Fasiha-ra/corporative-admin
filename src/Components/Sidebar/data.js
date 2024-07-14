@@ -31,15 +31,15 @@ export const data = [
         title:"Calendar",
         link:"/Calendar"
     },
-    {
-        icon: <RiHome4Line />,
-        title:"Certificates",
-        link:"/certificates"
-    },
+    // {
+    //     icon: <RiHome4Line />,
+    //     title:"Certificates",
+    //     link:"/certificates"
+    // },
     {
         icon: <FaRegBell />,
         title:"Anonymous Forum",
-        link:"/AnonymousForum"
+        link:"/AnonymousForums"
     },
     {
         icon: <RiNewspaperLine />,

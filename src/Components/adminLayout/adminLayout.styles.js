@@ -27,7 +27,7 @@ export const MainLayoutSection = styled.div`
       padding-top: 30px;
 
       @media (min-width: 1440px) {
-        max-width: 430px;
+        max-width: 380px;
       }
     }
     .mainContent {

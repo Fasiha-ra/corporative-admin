@@ -3,7 +3,7 @@ export const ProfileWrap = styled.div`
   background-color: var(--primary-darkblue);
   color: var(--white);
   padding: 80px 0;
-  /* height: 100vh; */
+  height: 100vh;
   .container {
     max-width: 1574px;
     margin: 0 auto;
