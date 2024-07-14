@@ -9,6 +9,9 @@ import UploadProfile from "./Components/Auth/UploadProfile";
 import AdminLayout from "./Components/adminLayout";
 import SupportSec from "./Components/Support";
 import CompanyProfile from "./Components/CompanyProfile";
+import ForgetPass from "./Components/CompanyProfile/ChangePass/ForgetPass";
+import SubscriptionDetail from "./Components/CompanyProfile/PlanDetail";
+import Reports from "./Components/Reports";
 
 const App = () => {
   return (
@@ -23,7 +26,10 @@ const App = () => {
       
        <Route path="/" element={<AdminLayout />}>
        <Route path="/support" element={<SupportSec/>}/>
+       <Route path="/reports" element={<Reports/>}/>
        <Route path="/CompanyProfile" element={<CompanyProfile/>}/>
+       <Route path="/CompanyProfile/forgot-password" element={<ForgetPass/>}/>
+       <Route path="/CompanyProfile/SubscriptionDetail" element={<SubscriptionDetail/>}/>
        </Route> 
        
       </Routes>

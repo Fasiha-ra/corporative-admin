@@ -32,7 +32,7 @@ export const SidebarWrap = styled.div`
   .sidebarHolder{
     ul{
       li{
-        padding: 0 0 20px 30px;
+        padding: 0 0 40px 30px;
         font-size: 20px;
         a{
           display: flex;

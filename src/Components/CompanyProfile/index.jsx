@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CompanyWrapper,
-  Table,
+  Tables,
   TableData,
   TableHeader,
   TableRow,
@@ -12,10 +12,57 @@ import nexxt from "../../assets/companyprofile/nexxt.png";
 import backarrow from "../../assets/support/backArrow.png";
 import { useNavigate } from "react-router-dom";
 import ChangePassword from "./ChangePass";
+import Table from "../Table";
 const CompanyProfile = () => {
-  const navigate = useNavigate();
+  const columns = [
+    { key: 'planName', header: 'Plan Name/Type' },
+    { key: 'startDate', header: 'Start Date' },
+    { key: 'endDate', header: 'End Date' },
+    {
+      key: 'viewDetails',
+      header: 'View Details',
+      render: (data, row) => (
+        <img
+          src={data}
+          alt="next icon"
+          onClick={() => handleImageClick(row)}
+          style={{ cursor: 'pointer' }}
+        />
+      ),
+    },
+  ];
+
+  const data = [
+    {
+      planName: 'Gold',
+      startDate: '01 Jan 2024',
+      endDate: '01 Jan 2025',
+      viewDetails: nexxt,
+    }
+  ];
+  const navigate =useNavigate();
+  const handleImageClick= ()=>{
+    navigate("/CompanyProfile/SubscriptionDetail");
+  }
+ 
   const backToPage = () => {
     navigate("/dashbord");
+  };
+  const [bgImage, setBgImage] = useState(BG);
+  const [logoImage, setLogoImage] = useState(logo);
+
+  const handleBgImageChange = (event) => {
+    if (event.target.files[0]) {
+      const newImage = URL.createObjectURL(event.target.files[0]);
+      setBgImage(newImage);
+    }
+  };
+
+  const handleLogoImageChange = (event) => {
+    if (event.target.files[0]) {
+      const newImage = URL.createObjectURL(event.target.files[0]);
+      setLogoImage(newImage);
+    }
   };
   return (
     <CompanyWrapper>
@@ -23,11 +70,31 @@ const CompanyProfile = () => {
         <div className="arrow" onClick={backToPage}>
           <img src={backarrow} alt="arrow" />
         </div>
-        <div className="bgimg">
-          <img src={BG} alt="bgimg" />
+        <div
+          className="bgimg"
+          onClick={() => document.getElementById("bgImageInput").click()}
+        >
+          <img src={bgImage} alt="bgimg" />
+          <input
+            type="file"
+            id="bgImageInput"
+            style={{ display: "none" }}
+            onChange={handleBgImageChange}
+            accept=".jpg, .jpeg, .png"
+          />
         </div>
-        <div className="logo">
-          <img src={logo} alt="logo" />
+        <div
+          className="logo"
+          onClick={() => document.getElementById("logoInput").click()}
+        >
+          <img src={logoImage} alt="logo" />
+          <input
+            type="file"
+            id="logoInput"
+            style={{ display: "none" }}
+            onChange={handleLogoImageChange}
+            accept=".jpg, .jpeg, .png"
+          />
         </div>
       </div>
       <div className="InfosysLimited">
@@ -56,30 +123,11 @@ const CompanyProfile = () => {
       <div className="Subscription">
         <div className="wrapper">
           <span className="h2">Subscriptions</span>
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Plan Name/Type</th>
-                <th scope="col">Start Date</th>
-                <th scope="col">End Date</th>
-                <th scope="col">View Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Plan Name/Type">Gold</td>
-                <td data-label="Start Date">01 Jan 2024</td>
-                <td data-label="End Date">01 Jan 2025</td>
-                <td data-label="View Details">
-                  <img src={nexxt} alt="nextcon" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+           <Table columns={columns} data={data} />
         </div>
       </div>
       <div className="changepass">
-        <ChangePassword/>
+        <ChangePassword />
       </div>
     </CompanyWrapper>
   );
