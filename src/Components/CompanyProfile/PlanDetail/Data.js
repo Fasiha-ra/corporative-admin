@@ -6,14 +6,14 @@ export const SubColumn = [
   {
     key: "viewDetails",
     header: "View Details",
-    render: (data, row) => (
-      <img
-        src={data}
-        alt="next icon"
-        //   onClick={() => handleImageClick(row)}
-        style={{ cursor: "pointer" }}
-      />
-    ),
+    // render: (data, row) => (
+    //   <img
+    //     src={data}
+    //     alt="next icon"
+    //     //   onClick={() => handleImageClick(row)}
+    //     style={{ cursor: "pointer" }}
+    //   />
+    // ),
   },
 ];
 export const SubRow =[
@@ -21,42 +21,42 @@ export const SubRow =[
         planName: "Gold",
         startDate: "01 Jan 2024",
         endDate: "01 Jan 2025",
-        viewDetails: preview,
+        viewDetails: {image:preview},
       },
       {
         planName: "Gold",
         startDate: "01 Jan 2024",
         endDate: "01 Jan 2025",
-        viewDetails: preview,
+        viewDetails: {image:preview},
       },
       {
         planName: "Gold",
         startDate: "01 Jan 2024",
         endDate: "01 Jan 2025",
-        viewDetails: preview,
+        viewDetails: {image:preview},
       },
       {
         planName: "Gold",
         startDate: "01 Jan 2024",
         endDate: "01 Jan 2025",
-        viewDetails: preview,
+        viewDetails: {image:preview},
       },
       {
         planName: "Gold",
         startDate: "01 Jan 2024",
         endDate: "01 Jan 2025",
-        viewDetails: preview,
+        viewDetails: {image:preview},
       },
       {
         planName: "Gold",
         startDate: "01 Jan 2024",
         endDate: "01 Jan 2025",
-        viewDetails: preview,
+        viewDetails: {image:preview},
       },
       {
         planName: "Gold",
         startDate: "01 Jan 2024",
         endDate: "01 Jan 2025",
-        viewDetails: preview,
+        viewDetails: {image:preview},
       },
 ]

@@ -3,34 +3,31 @@ import { CalendarWrap } from "./Calendar.styles";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import CalendarHeader from "./CalendarHeader";
 import TimeSlots from "./TimeSlots";
-import LectureSchedule from "../LectureSchedule";
+import LectureSchedule from "./LectureSchedule";
 
 const Calendar = () => {
-  const [lecture, setLecture] = useState(false);
-  const BackToPage = () => {
-    setLecture(false);
+  const [showInnovation, setShowInnovation] = useState(false);
+
+  const openInnovation = () => {
+    setShowInnovation(true);
   };
-  const Lecturehandle = () => {
-    setLecture(true);
-  };
- 
+const BackToPage = () =>{
+  setShowInnovation(false);
+}
   return (
     <>
-      <CalendarWrap>
-       
-        {!lecture ? (
-          <div className="calenderHolder">
-            <h4>
-              Tuesday, November 30 2024 <FaAngleLeft />
-              <FaAngleRight />
-            </h4>
-            <CalendarHeader />
-            <TimeSlots click={Lecturehandle} />
-          </div>
-        ) : (
-          <LectureSchedule BackToPage={BackToPage} />
-        )}
-      </CalendarWrap>
+      {!showInnovation ? (
+        <CalendarWrap>
+          <h4>
+            Tuesday, November 30 2024 <FaAngleLeft />
+            <FaAngleRight />
+          </h4>
+          <CalendarHeader />
+          <TimeSlots click={openInnovation} />
+        </CalendarWrap>
+      ) : (
+        <LectureSchedule BackToPage={BackToPage}/>
+      )}
     </>
   );
 };

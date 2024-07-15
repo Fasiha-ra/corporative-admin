@@ -37,7 +37,7 @@ const CompanyProfile = () => {
       planName: 'Gold',
       startDate: '01 Jan 2024',
       endDate: '01 Jan 2025',
-      viewDetails: nexxt,
+      viewDetails: {image:nexxt},
     }
   ];
   const navigate =useNavigate();
@@ -123,7 +123,7 @@ const CompanyProfile = () => {
       <div className="Subscription">
         <div className="wrapper">
           <span className="h2">Subscriptions</span>
-           <Table columns={columns} data={data} />
+           <Table columns={columns} data={data} onImageClick={handleImageClick}/>
         </div>
       </div>
       <div className="changepass">

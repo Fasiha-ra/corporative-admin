@@ -17,7 +17,7 @@ const Table = ({ columns, data, border, onImageClick }) => {
       if (cellData.image && cellData.text) {
         return <TextImageTableData src={cellData.image} alt={cellData.text} text={cellData.text} />;
       } else if (cellData.image) {
-        return <ImageTableData src={cellData.image} alt="" onClick={() => onImageClick(cellData.image)} />;
+        return <ImageTableData src={cellData.image} alt="" onClick={() => onImageClick && onImageClick(cellData.image)} />;
       } else if (cellData.buttons) {
         return <ButtonTable buttons={cellData.buttons} />;
       }
@@ -63,7 +63,7 @@ Table.propTypes = {
   ).isRequired,
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   border: PropTypes.bool,
-  onImageClick: PropTypes.func, // Ensure onImageClick prop is defined
+  onImageClick: PropTypes.func, 
 };
 
 export default Table;

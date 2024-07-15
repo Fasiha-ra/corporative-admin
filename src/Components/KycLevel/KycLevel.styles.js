@@ -2,18 +2,19 @@ import styled from "styled-components";
 
 export const StyledKycLevel = styled.div`
   width: 100%;
-  max-width: 250px;
+  width: 250px;
   position: relative;
-  height: 10px;
+  /* height: 10px; */
   background: #EAEAEA;
   overflow: hidden;
-  @media  (min-width: 768pxpx){
-    max-width: 300;
-    height: 20px;
+  height: ${({ $height}) => $height? $height : "10px"};
+  @media  (min-width: 768px){
+    width: 300px;
+    height: ${({ $height}) => $height? $height : "20px"};
   }
   @media  (min-width: 992px){
-    max-width: 370;
-    height: 30px;
+    width: 370px;
+    height: ${({ $height}) => $height? $height : "30px"};
   }
   
   &::before {

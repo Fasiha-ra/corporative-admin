@@ -3,6 +3,8 @@ import Table from "../../Table";
 import { feedbackCol, feedbackData } from "../ReportData";
 import Modal from "../../Modal";
 import FeedbackPopup from "../FeedbackPopup";
+import { AnonymousWrap } from "../AnonymousForum/anonymous.styles";
+import { FeedbackWrap } from "./feedback.styles";
 
 const SessionFeedback = () => {
   const [feedbackOpen, setFeedbackOpen] = useState(false);
@@ -10,7 +12,7 @@ const SessionFeedback = () => {
     setFeedbackOpen(true);
   };
   return (
-    <div>
+    <FeedbackWrap>
       <div className="wrapper">
         <strong className="title"> Session Feedback</strong>
         <Table
@@ -25,7 +27,7 @@ const SessionFeedback = () => {
           <FeedbackPopup />
         </Modal>
       )}
-    </div>
+    </FeedbackWrap>
   );
 };
 

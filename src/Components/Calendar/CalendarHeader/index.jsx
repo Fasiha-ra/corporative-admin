@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "../../TextField/SearchBar";
 import Button from "../../Button";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css"; // Import the DatePicker CSS
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa6";
 import { HeaderWrapper } from "./CalendarHeader.styles";
 import { Link } from "react-router-dom";
 
@@ -20,14 +19,14 @@ const CalendarHeader = () => {
   const handleToggleDropdownType = () => {
     setToggleDropdownType(!toggleDropdownType);
     if (!toggleDropdownType) {
-      setToggleDropdownTopic(false);
+      setToggleDropdownTopic(false); 
     }
   };
 
   const handleToggleDropdownTopic = () => {
     setToggleDropdownTopic(!toggleDropdownTopic);
     if (!toggleDropdownTopic) {
-      setToggleDropdownType(false);
+      setToggleDropdownType(false); 
     }
   };
 

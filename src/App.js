@@ -25,6 +25,9 @@ import ViewSession from "./Components/Sessions/VewSession";
 import SessionLayout from "./Components/SessionLayout";
 import CoachProfile from "./Components/CoachProfile";
 import MyProfile from "./Components/MyProfile";
+import Calendar from "./Components/Calendar";
+import LectureSchedule from "./Components/Calendar/LectureSchedule";
+import Employee from "./Components/Calendar/LectureSchedule/Employe";
 const App = () => {
   return (
     <AuthProvider>
@@ -40,6 +43,9 @@ const App = () => {
           <Route path="/CoachProfile" element={<CoachProfile/>} />
           <Route path="/MyProfile" element={<MyProfile/>} />
            <Route path="/sessions" element={<Sessions/>}/>
+           <Route path="/Calendar" element={<Calendar/>} />
+           <Route path="/LectureSchedule" element={<LectureSchedule/>} />
+           <Route path="/Employee" element={<Employee/>} />
            <Route path="/sessions/ViewSession" element={<ViewSession/>}/>
             <Route path="/AnonymousForums" element={<AnonymousForums />} />
             <Route path="/reports" element={<Reports />}>

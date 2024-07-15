@@ -1,6 +1,6 @@
 import React from "react";
 import { LectureWrap } from "./Lecture.styles";
-import img1 from "../../../assets/session/profileBG.png";
+import img1 from "../../../assets/session/completeSession.png";
 import author from "../../../assets/session/logo.png";
 import stars from "../../../assets/session/stars.png";
 import date from "../../../assets/session/calendar.png";
@@ -10,11 +10,11 @@ import Accordions from "../../Accordions";
 import { items } from "../../Constant/Data";
 import backicon from "../../../assets/session/backarrow.png";
 import { useNavigate } from "react-router-dom";
-const LectureSchedule = () => {
-  const navigate =useNavigate();
-  const BacktoPage = () =>{
-      navigate("/Calendar")
-  }
+const Employee = () => {
+const navigate =useNavigate();
+const BacktoPage = () =>{
+    navigate("/Calendar")
+}
   return (
     <LectureWrap>
       <div className="backimg" onClick={BacktoPage}>
@@ -82,4 +82,4 @@ const LectureSchedule = () => {
   );
 };
 
-export default LectureSchedule;
+export default Employee;

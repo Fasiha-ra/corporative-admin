@@ -14,7 +14,7 @@ export const TableWrap = styled.div`
     ${(props) =>
       props.border &&
       css`
-        border-bottom: 1px solid #ddd; /* Apply border-bottom if prop is true */
+        border-bottom: 1px solid #ddd;
       `}
     padding: 0.35em;
   }
@@ -23,7 +23,7 @@ export const TableWrap = styled.div`
   table td {
     padding: 0.625em;
     text-align: center;
-    word-wrap: break-word; /* Ensures text wraps within cells */
+    word-wrap: break-word;
     overflow: hidden;
   }
 
@@ -95,27 +95,28 @@ export const TableWrap = styled.div`
 
   .imgWrap {
     display: flex;
-    align-items: center; /* Ensure proper alignment */
-    justify-content: center; /* Center align image and text */
-    
+    justify-content: center;
+
     @media (min-width: 600px) {
       align-items: center;
     }
+    
+  }
+  .imag {
+      img {
+        width: 50px !important;
+        height: 50px;
+        margin-top: -15px;
+        margin-right: 10px;
 
-    img {
-      width: 50px !important;
-      height: 50px;
-      margin-top: -15px;
-      margin-right: 10px; /* Add margin between image and text */
+        @media (min-width: 600px) {
+          margin-top: 0;
+        }
 
-      @media (min-width: 600px) {
-        margin-top: 0;
-      }
-
-      @media (min-width: 992px) {
-        width: 100px !important;
-        height: 100px;
+        @media (min-width: 992px) {
+          width: 100px !important;
+          height: 100px;
+        }
       }
     }
-  }
 `;

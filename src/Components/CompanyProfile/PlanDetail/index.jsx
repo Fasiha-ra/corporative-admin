@@ -29,7 +29,7 @@ const SubscriptionDetail = () => {
       planName: "Gold",
       startDate: "01 Jan 2024",
       endDate: "01 Jan 2025",
-      viewDetails: preview,
+      viewDetails:{image: preview},
     },
   ];
   const navigate = useNavigate();
