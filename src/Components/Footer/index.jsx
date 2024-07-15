@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterWrap } from "./Footer.styles";
-import { FooterData } from "../../Constant/Data";
+import { FooterData } from "../Constant/Data";
 import { Link } from "react-router-dom";
 import logo from '../../assets/header/mainLogo.png';
 const Footer = () => {

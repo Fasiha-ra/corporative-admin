@@ -4,6 +4,10 @@ import session from "../../assets/session/upcomingSession.png";
 import completed from "../../assets/session/completeSession.png";
 import logo from "../../assets/session/logo.png";
 import groupimg from "../../assets/session/groupSession.png";
+import sessions from "../../assets/session/sessions.png";
+import profile1 from "../../assets/profile/profile1.png";
+import profile2 from "../../assets/profile/profile2.png";
+import profile3 from "../../assets/profile/profile3.png";
 export const TicketData = [
   {
     img: TicketImg,
@@ -208,3 +212,157 @@ export const items = [
     content: 'Change is now and forever. It is not optional any more than breathing and sleeping and doing it well is a requirement of organization health. Learning to capture the competitive advantage of a changing landscape is an essential skill for leaders.'
   }
 ];
+export const FooterData = [
+  {
+    title: "Help Center",
+    link: "/",
+  },
+  {
+    title: "About Us",
+    link: "/",
+  },
+  {
+    title: "Contact Us",
+    link: "/",
+  },
+  {
+    title: "Our Module",
+    link: "/",
+  },
+  {
+    title: "Terms & Privacy",
+    link: "/",
+  },
+];
+export const TrendingSessionData = [
+  {
+    img: sessions,
+    title: "Time Management Ideas",
+  },
+  {
+    img: sessions,
+    title: "Time Management Ideas",
+  },
+];
+export const CoachProfile = [
+  {
+    img: profile1,
+    name:"Surbhi Mehta",
+    sub :"Talent Management",
+    designation:"Human Rights | Women Empowerment",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile3,
+    name:"Vinod Nehru",
+    sub :"Talent Management",
+    designation:"Employee Growth Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile2,
+    name:"Manjiri Mishra",
+    sub :"Talent Management",
+    designation:"C-suits Advisory Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile2,
+    name:"Manjiri Mishra",
+    sub :"Talent Management",
+    designation:"C-suits Advisory Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile1,
+    name:"Surbhi Mehta",
+    sub :"Talent Management",
+    designation:"Human Rights | Women Empowerment",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile3,
+    name:"Vinod Nehru",
+    sub :"Talent Management",
+    designation:"Employee Growth Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile2,
+    name:"Manjiri Mishra",
+    sub :"Talent Management",
+    designation:"C-suits Advisory Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile2,
+    name:"Manjiri Mishra",
+    sub :"Talent Management",
+    designation:"C-suits Advisory Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile1,
+    name:"Surbhi Mehta",
+    sub :"Talent Management",
+    designation:"Human Rights | Women Empowerment",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile3,
+    name:"Vinod Nehru",
+    sub :"Talent Management",
+    designation:"Employee Growth Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile2,
+    name:"Manjiri Mishra",
+    sub :"Talent Management",
+    designation:"C-suits Advisory Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+  {
+    img: profile2,
+    name:"Manjiri Mishra",
+    sub :"Talent Management",
+    designation:"C-suits Advisory Program",
+    title :"Uploaded Sessions : 10",
+    title1 :"Enrolled Students : 1000",
+    review :"50 reviews"
+
+  },
+]

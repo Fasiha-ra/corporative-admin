@@ -22,6 +22,8 @@ import ActiveInActive from "./Components/Reports/ActiveInactive";
 import AnonymousForums from "./Components/AnonymousForums";
 import Sessions from "./Components/Sessions";
 import ViewSession from "./Components/Sessions/VewSession";
+import SessionLayout from "./Components/SessionLayout";
+import CoachProfile from "./Components/CoachProfile";
 const App = () => {
   return (
     <AuthProvider>
@@ -34,6 +36,7 @@ const App = () => {
           <Route path="/UploadProfile" element={<UploadProfile />} />
 
           <Route path="/" element={<AdminLayout />}>
+          <Route path="/CoachProfile" element={<CoachProfile/>} />
            <Route path="/sessions" element={<Sessions/>}/>
            <Route path="/sessions/ViewSession" element={<ViewSession/>}/>
             <Route path="/AnonymousForums" element={<AnonymousForums />} />
@@ -69,6 +72,7 @@ const App = () => {
               element={<SubscriptionDetail />}
             />
           </Route>
+          <Route  path="/SessionLayout" element={<SessionLayout/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>

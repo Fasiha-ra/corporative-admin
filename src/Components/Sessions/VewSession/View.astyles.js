@@ -13,7 +13,7 @@ export const ViewWrap = styled.div`
       @media (min-width: 1200px) {
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        align-items: center;
         gap: 20px;
       }
       .textHolder {
@@ -30,7 +30,7 @@ export const ViewWrap = styled.div`
           font-size: 20px;
           line-height: 24px;
           font-weight: 700;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
           @media (min-width: 1200px) {
             font-size: 28px;
             line-height: 32px;
@@ -55,8 +55,7 @@ export const ViewWrap = styled.div`
           }
         }
         .btns {
-          display: flex;
-          gap: 20px;
+          margin-top: 20px;
           button{
             width: 190px;
           }
@@ -64,14 +63,14 @@ export const ViewWrap = styled.div`
       }
       .thumb {
         img {
-          width: 540px;
+          width: 740px;
           margin: 0 auto;
           padding-top: 20px;
-
-          @media (min-width: 1440px) {
+          height: 468px;
+          /* @media (min-width: 1440px) {
             width: 740px;
-            height: 483px;
-          }
+            height: 468px;
+          } */
         }
       }
     }
@@ -95,4 +94,46 @@ export const ViewWrap = styled.div`
       }
     }
   }
+  .logoWrap {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          margin-bottom: 20px;
+          .logo {
+            width: 60px;
+            height: 60px;
+          }
+          .logotext {
+            .name {
+              display: block;
+              font-size: 16px;
+              line-height: 18px;
+              font-weight: 500;
+              @media (min-width: 992px) {
+                font-size: 18px;
+                line-height: 22px;
+              }
+            }
+            .designation {
+              display: block;
+              font-size: 16px;
+              line-height: 20px;
+              color: var(--light-gray);
+            }
+          }
+          .reviewWrap {
+            display: flex;
+            gap: 10px;
+
+            align-items: center;
+            .stars {
+              width: 60px;
+            }
+            .review {
+              color: var(--light-gray);
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+        }
 `;

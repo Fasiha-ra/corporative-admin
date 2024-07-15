@@ -95,6 +95,10 @@ export const SessionWrapper = styled.div`
             gap: 10px;
             font-size: 16px;
             line-height: 20px;
+            img{
+              width: 16px;
+              height: 16px;
+            }
           }
         }
       }

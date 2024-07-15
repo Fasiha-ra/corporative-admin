@@ -11,11 +11,16 @@ import employe from "../../../assets/session/employe.png";
 import employes from "../../../assets/session/employes.png";
 import { useNavigate } from "react-router-dom";
 import backarrow from "../../../assets/session/backarrow.png";
+import logo from "../../../assets/session/logo.png";
+import stars from "../../../assets/session/stars.png";
 const ViewSession = () => {
- const navigate = useNavigate();
- const backToPage = () =>{
-  navigate("/sessions")
- }
+  const navigate = useNavigate();
+  const backToPage = () => {
+    navigate("/sessions");
+  };
+  const BookSession = () => {
+    navigate("/SessionLayout");
+  }
   return (
     <ViewWrap>
       <div className="backarrow" onClick={backToPage}>
@@ -24,7 +29,20 @@ const ViewSession = () => {
       <div className="view">
         <div className="sessionDetail">
           <div className="textHolder">
-            <h2>Adapting to Change and Embracing Innovation</h2>
+            <h2>Change Management : Leading Agile Systems Change Management</h2>
+            <div className="logoWrap">
+              <figure className="logo">
+                <img src={logo} alt="logo" />
+              </figure>
+              <div className="logotext">
+                <strong className="name">By : Ankita Sharma</strong>
+                <span className="designation">Talent Management</span>
+
+                <figure className="stars">
+                  <img src={stars} alt="stars" />
+                </figure>
+              </div>
+            </div>
             <div className="date flex">
               <figure>
                 <img src={date} alt="date" />
@@ -43,11 +61,8 @@ const ViewSession = () => {
               </figure>
               <span>20 Employees Enrolled</span>
             </div>
-            <div className="btns">
-              <Button width="150px">Edit Session</Button>
-              <Button type="outline" width="150px">
-                Delete Session
-              </Button>
+            <div className="btns" onClick={BookSession}>
+              <Button width="150px">Book Session</Button>
             </div>
           </div>
           <figure className="thumb">
@@ -55,7 +70,7 @@ const ViewSession = () => {
           </figure>
         </div>
         <div className="sessionPara">
-          <h5>About Session</h5>
+          <h4>About Session</h4>
           <p>
             Change is now and forever. It is not optional any more than
             breathing and sleeping and doing it well is a requirement of
