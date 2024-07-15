@@ -7,7 +7,6 @@ const About = () => {
       <div className="wrapper">
       <div className="flex">
       <h2>About Coach</h2>
-      <TbPencil />
       </div>
       <p>
         I'm a UI/UX designer with a degree in Computer science and Engineering.

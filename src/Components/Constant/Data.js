@@ -8,6 +8,9 @@ import sessions from "../../assets/session/sessions.png";
 import profile1 from "../../assets/profile/profile1.png";
 import profile2 from "../../assets/profile/profile2.png";
 import profile3 from "../../assets/profile/profile3.png";
+import certificate from "../../assets/profile/certificate.png";
+import ratingIcon from "../../assets/anonymous/post.png";
+
 export const TicketData = [
   {
     img: TicketImg,
@@ -364,5 +367,103 @@ export const CoachProfile = [
     title1 :"Enrolled Students : 1000",
     review :"50 reviews"
 
+  },
+];
+export const CertificateData = [
+  {
+    img: certificate,
+    title: "1-UX Design Fundamentals.pdf",
+  },
+  {
+    img: certificate,
+    title: "2-UX Design Fundamentals.pdf",
+  },
+  {
+    img: certificate,
+    title: "3-UX Design Fundamentals.pdf",
+  },
+  {
+    img: certificate,
+    title: "4-UX Design Fundamentals.pdf",
+  },
+  {
+    img: certificate,
+    title: "UX Design Fundamentals.pdf",
+  },
+  {
+    img: certificate,
+    title: "UX Design Fundamentals.pdf",
+  },
+];
+export const RatingData = [
+  {
+    img: ratingIcon,
+    title: "Kayn Vampyr:",
+    para: "Meu brother mais vampiro de todos, te considero pakas.",
+  },
+  {
+    img: ratingIcon,
+    title: "Kayn Vampyr:",
+    para: "Meu brother mais vampiro de todos, te considero pakas.",
+  },
+  {
+    img: ratingIcon,
+    title: "Kayn Vampyr:",
+    para: "Meu brother mais vampiro de todos, te considero pakas.",
+  },
+  {
+    img: ratingIcon,
+    title: "Kayn Vampyr:",
+    para: "Meu brother mais vampiro de todos, te considero pakas.",
+  },
+  {
+    img: ratingIcon,
+    title: "Kayn Vampyr:",
+    para: "Meu brother mais vampiro de todos, te considero pakas.",
+  },
+  {
+    img: ratingIcon,
+    title: "Kayn Vampyr:",
+    para: "Meu brother mais vampiro de todos, te considero pakas.",
+  },
+];
+export const Educationdata = [
+  {
+    maintitle: "Education",
+    title: "Education University",
+    subtitle: "Talent Management Specialization",
+    grade: "Grade : 8.0",
+    year: "6 Years",
+    since: "2020 - 2027",
+    address: "Mumbai, Maharashtra",
+  },
+];
+export const Experiencedata = [
+  {
+    maintitle: "Experience",
+    title: "Talent Management Professional",
+    subtitle: "SNDK Technologies",
+    grade: "Grade : 8.0",
+    year: "6 Years",
+    since: "2020 - 2027",
+    address: "Mumbai, Maharashtra",
+  },
+];
+export const SessionTopics = [
+  {
+    img: session,
+    title: "Change Management : Leading Agile Systems Change.....",
+  },
+  {
+    img: session,
+    title: "Change Management : Leading Agile Systems Change.....",
+  },
+  {
+    img: session,
+    title: "Change Management : Leading Agile Systems Change.....",
+  },
+  {
+    img: session,
+    title: "Change Management : Leading Agile Systems Change.....",
   },
 ]

@@ -14,14 +14,14 @@ export const EdcuationWrap = styled.div`
         }
     }
     .text{
-        color: var(--gray-50);
+        color: var(--light-gray);
         h4{
             font-weight: 500;
             margin-bottom: 5px;
         }
         p, span{
             font-weight: 400;
-            color: var(--gray-50);
+            color: var(--light-gray);
             font-size: 16px; 
             @media (min-width: 768px){
                 font-size: 20px;

@@ -24,6 +24,7 @@ import Sessions from "./Components/Sessions";
 import ViewSession from "./Components/Sessions/VewSession";
 import SessionLayout from "./Components/SessionLayout";
 import CoachProfile from "./Components/CoachProfile";
+import MyProfile from "./Components/MyProfile";
 const App = () => {
   return (
     <AuthProvider>
@@ -37,6 +38,7 @@ const App = () => {
 
           <Route path="/" element={<AdminLayout />}>
           <Route path="/CoachProfile" element={<CoachProfile/>} />
+          <Route path="/MyProfile" element={<MyProfile/>} />
            <Route path="/sessions" element={<Sessions/>}/>
            <Route path="/sessions/ViewSession" element={<ViewSession/>}/>
             <Route path="/AnonymousForums" element={<AnonymousForums />} />

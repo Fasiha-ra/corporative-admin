@@ -93,7 +93,7 @@ export const SessionWrapper = styled.div`
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 20px;
             img{
               width: 16px;

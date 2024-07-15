@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CertiWrapper } from "./Certificate.styles";
-import { CertificateData } from "../../../Constant/Data";
+import { CertificateData } from "../../Constant/Data";
 import prev from "../../../assets/profile/prev.png";
 import nextt from "../../../assets/profile/next.png";
 import { TbPencil } from "react-icons/tb";
@@ -48,10 +48,6 @@ const Certificate = () => {
       <div className="wrapper">
         <div className="flexwrap">
           <h2>Certificate</h2>
-          <div className="icons">
-            <FaPlus />
-            <TbPencil />
-          </div>
         </div>
         <div className="cardWrap">
           <figure

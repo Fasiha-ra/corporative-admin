@@ -21,7 +21,7 @@ const BookingSession = () => {
   const openPopup = () => {
     setPopup(true);
   };
-  const [experienceDropdownOpen, setExperienceDropdownOpen] = useState(false);
+
   const [yearsDropdownOpen, setYearsDropdownOpen] = useState(false);
 
   const [yearsOptions, setYearsOptions] = useState([
@@ -57,12 +57,12 @@ const BookingSession = () => {
         <h4 className="heading">Book Group Session</h4>
       </div>
       <label>
-        Experience in Years
+      Select Session Type
         <div className="dropdown-container">
           <div
             className="dropdown-header"
             onClick={() =>
-              toggleDropdown(setYearsDropdownOpen, setExperienceDropdownOpen)
+              toggleDropdown(setYearsDropdownOpen)
             }
           >
             {getSelectedOptionsText(yearsOptions)}

@@ -1,8 +1,6 @@
 import React from "react";
 import { EdcuationWrap } from "./Education.styles";
 import educationimg from "../../../assets/profile/education.png";
-import { TbPencil } from "react-icons/tb";
-import { FaPlus } from "react-icons/fa6";
 const Education = ({ data }) => {
   return (
     <EdcuationWrap>
@@ -11,10 +9,6 @@ const Education = ({ data }) => {
           <div key={ind}>
             <div className="flexwrap">
               <h2>{val.maintitle}</h2>
-              <div className="icons">
-                <FaPlus />
-                <TbPencil />
-              </div>
             </div>
             <div className="flex">
               <figure>

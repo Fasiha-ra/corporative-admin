@@ -1,7 +1,7 @@
 import React from "react";
 import { RatingWrap } from "./Rating.styles";
-import stars from "../../../assets/profile/stars.png";
-import { RatingData } from "../../../Constant/Data";
+import stars from "../../../assets/session/stars.png";
+import { RatingData } from "../../Constant/Data";
 const Rating = () => {
   return (
     <RatingWrap>

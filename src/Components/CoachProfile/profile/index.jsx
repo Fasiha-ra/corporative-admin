@@ -3,7 +3,12 @@ import { ProfileWrapper } from "./Profile.styles";
 import { CoachProfile } from "../../Constant/Data";
 import stars from "../../../assets/session/stars.png";
 import Button from "../../Button";
+import { useNavigate } from "react-router-dom";
 const Profile = () => {
+  const navigate = useNavigate();
+  const backToCoachProfile = () => {
+    navigate("/MyProfile");
+  }
   return (
     <ProfileWrapper>
       <div className="wrapper">
@@ -30,7 +35,7 @@ const Profile = () => {
                     <img src={stars} alt="stars" />
                     <span>{val.review}</span>
                   </div>
-                  <Button width="138px">Book Session</Button>
+                  <Button width="138px" onClick={backToCoachProfile}>Book Session</Button>
                 </div>
               </div>
             </div>
