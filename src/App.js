@@ -28,6 +28,11 @@ import MyProfile from "./Components/MyProfile";
 import Calendar from "./Components/Calendar";
 import LectureSchedule from "./Components/Calendar/LectureSchedule";
 import Employee from "./Components/Calendar/LectureSchedule/Employe";
+import EmployeeProfile from "./Components/EmployeeProfile";
+import DeactivateEmployee from "./Components/EmployeeProfile/DeactivateEmployee";
+import ActivateEmployee from "./Components/EmployeeProfile/ActivateEmployee";
+import AllEmployee from "./Components/EmployeeProfile/AllEmployee";
+import Dashboard from "./Components/Dashboard";
 const App = () => {
   return (
     <AuthProvider>
@@ -40,6 +45,13 @@ const App = () => {
           <Route path="/UploadProfile" element={<UploadProfile />} />
 
           <Route path="/" element={<AdminLayout />}>
+          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/EmployeeProfile" element={<EmployeeProfile/>}>
+          <Route path="/EmployeeProfile" element={<AllEmployee/>} />
+          <Route path="/EmployeeProfile/DeactivateEmployee" element={<DeactivateEmployee/>} />
+          <Route path="/EmployeeProfile/ActivateEmployee" element={<ActivateEmployee/>} />
+         
+          </Route> 
           <Route path="/CoachProfile" element={<CoachProfile/>} />
           <Route path="/MyProfile" element={<MyProfile/>} />
            <Route path="/sessions" element={<Sessions/>}/>

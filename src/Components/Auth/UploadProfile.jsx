@@ -22,7 +22,7 @@ const UploadProfile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/support");
+    navigate("/Dashboard");
     console.log("Form Data:", formData);
   };
 
