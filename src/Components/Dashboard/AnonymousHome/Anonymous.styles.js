@@ -9,7 +9,7 @@ export const AnalysisWrapper = styled.div`
   background-color: var(--white);
   border-radius: 25px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 10px;
 }
   .flex {
     display: flex;
@@ -21,7 +21,7 @@ export const AnalysisWrapper = styled.div`
       font-size: 18px;
       font-weight: 600;
       @media (min-width: 992px) {
-        font-size: 20px;
+        font-size: 18px;
       }
       @media (min-width: 1440px) {
         font-size: 23px;
@@ -62,7 +62,7 @@ export const AnalysisWrapper = styled.div`
       gap: 15px;
     }
     .barChart {
-      padding: 20px 10px;
+      padding: 20px;
       display: block;
       margin: 0 auto;
 

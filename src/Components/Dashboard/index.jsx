@@ -6,11 +6,13 @@ import MarkOptimization from "./LineChart";
 import BasicLineChart from "./LineChart";
 import AnalysisSession from "./AnalysisSession";
 import AnonymousHome from "./AnonymousHome";
+import CoachFeedback from "./CoachFeedback";
 const Dashboard = () => {
   return (
     <DashboardWrap>
       <AnalysisSession />
       <AnonymousHome/>
+      <CoachFeedback/>
       {/* <StackBars /> */}
       {/* <BasicPie /> */}
      
