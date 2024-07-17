@@ -27,12 +27,16 @@ export const AnalysisWrapper = styled.div`
         gap: 20px;
       }
       button {
-        width: 215px;
+        margin-top: 10px;
+        width: 205px;
         display: flex;
         gap: 10px;
         border: 1px solid #ddd;
         &:nth-child(1) {
           width: 100px;
+        }
+        @media (min-width: 576px){
+            width: 215px;
         }
       }
     }
@@ -73,7 +77,7 @@ export const AnalysisWrapper = styled.div`
           grid-template-columns: repeat(3, 1fr);
         }
         @media (min-width: 1200px) {
-          grid-template-columns: repeat(1, 1fr);
+          grid-template-columns: repeat(2, 1fr);
         }
         @media (min-width: 1600px) {
           grid-template-columns: repeat(2, 1fr);
@@ -185,7 +189,7 @@ export const AnalysisWrapper = styled.div`
   }
   .textWrap {
     margin-bottom: 0;
-    @media (max-width: 992px) {
+    @media (max-width: 1440px) {
       font-size: 14px !important;
     }
   }

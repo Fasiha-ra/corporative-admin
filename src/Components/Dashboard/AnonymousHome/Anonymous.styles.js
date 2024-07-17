@@ -5,17 +5,25 @@ export const AnalysisWrapper = styled.div`
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
   padding: 20px;
   margin-bottom: 20px;
-
+.lineChart, .barChart {
+  background-color: var(--white);
+  border-radius: 25px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
   .flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
     margin-bottom: 20px;
     strong {
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 600;
       @media (min-width: 992px) {
+        font-size: 20px;
+      }
+      @media (min-width: 1440px) {
         font-size: 23px;
       }
     }
@@ -23,16 +31,18 @@ export const AnalysisWrapper = styled.div`
       display: flex;
       gap: 5px;
       flex-wrap: wrap;
-      @media (min-width: 992px) {
-        gap: 20px;
-      }
+     
       button {
-        width: 215px;
+        margin-top: 10px;
+        width: 205px;
         display: flex;
         gap: 10px;
         border: 1px solid #ddd;
         &:nth-child(1) {
           width: 100px;
+        }
+        @media (min-width: 576px){
+            width: 215px;
         }
       }
     }
@@ -45,14 +55,20 @@ export const AnalysisWrapper = styled.div`
     @media (min-width: 1200px) {
       display: flex;
       justify-content: center;
+      gap: 5px;
+    }
+    @media (min-width: 1200px) {
+     
+      gap: 15px;
     }
     .barChart {
-      padding: 0 0 0 20px;
+      padding: 20px 10px;
       display: block;
       margin: 0 auto;
 
       @media (min-width: 1360px) {
         flex-shrink: 0;
+        width: 473px;
       }
       .css-66gjpw-MuiResponsiveChart-container {
         /* height: 338px !important; */
@@ -63,20 +79,20 @@ export const AnalysisWrapper = styled.div`
           width: 350px !important;
         }
       }
+      .MuiPieArc-root{
+        &:nth-child(1){
+            fill:#f0ac28 !important;
+        }
+        &:nth-child(2){
+            fill:#58a7e0 !important;
+        }
+      }
       .detailChart {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        @media (min-width: 400px) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        @media (min-width: 600px) {
-          grid-template-columns: repeat(3, 1fr);
-        }
-        @media (min-width: 1200px) {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        @media (min-width: 1600px) {
-          grid-template-columns: repeat(2, 1fr);
+        @media (max-width:1200px){
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .textWrap {
           padding-bottom: 20px;
@@ -92,21 +108,7 @@ export const AnalysisWrapper = styled.div`
               background-color: #f0ac28;
             }
           }
-          &:nth-child(3) {
-            .color {
-              background-color: #ffa5a5;
-            }
-          }
-          &:nth-child(4) {
-            .color {
-              background-color: #8fe2ff;
-            }
-          }
-          &:nth-child(5) {
-            .color {
-              background-color: #f0d028;
-            }
-          }
+         
           .color {
             width: 18px;
             height: 18px;
@@ -127,14 +129,18 @@ export const AnalysisWrapper = styled.div`
     }
   }
   .lineChart {
+    
     @media (min-width: 1360px) {
       flex-grow: 1;
       width: 100%;
       max-width: inherit;
     }
-    max-width: 600px;
+    /* max-width: 600px; */
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    @media (min-width: 1200px){
+      margin: 0 auto ;
+    }
     .MuiChartsLegend-series {
       &:nth-child(1) {
         .MuiChartsLegend-mark {
@@ -162,6 +168,15 @@ export const AnalysisWrapper = styled.div`
       &MuiLineElement-series-auto-generated-id-2 {
         stroke: #0057e7 !important;
       }
+    }
+    .css-10vg0a6-MuiResponsiveChart-container {
+        width: inherit !important;
+    }
+    .css-1evyvmv-MuiChartsSurface-root{
+       @media (max-width: 576px){
+        width: 100% !important;
+        max-width: 320px !important;
+       }
     }
   }
 `;

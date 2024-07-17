@@ -1,20 +1,34 @@
 import * as React from 'react';
-import { PieChart } from '@mui/x-charts/PieChart';
+import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
 
-export default function BasicPie() {
+const data = [
+  { value: 20 },
+  { value: 80 },
+
+];
+
+const size = {
+  width: 400,
+  height: 200,
+};
+
+export default function PieLabel() {
   return (
     <PieChart
       series={[
         {
-          data: [
-            { id: 0, value: 5, label: 'series A' },
-            { id: 1, value: 20, label: 'series B' },
-            
-          ],
+          arcLabel: (item) => ` ${item.value}%`,
+          arcLabelMinAngle: 45,
+          data,
         },
       ]}
-      width={400}
-      height={200}
+      sx={{
+        [`& .${pieArcLabelClasses.root}`]: {
+          fill: 'black',
+          fontWeight: 'bold',
+        },
+      }}
+      {...size}
     />
   );
 }
