@@ -280,4 +280,21 @@ export const GlobalStyles = createGlobalStyle`
     .rbc-event{
       height: 8.16667%;
     }}
+    .MuiPieArc-root{
+      &:nth-child(1){
+        fill: #58A6DF !important;
+      }
+      &:nth-child(2){
+      fill: #F0D028 !important;
+      }
+      &:nth-child(4){
+        fill:#F0AC28 !important;
+      }
+      &:nth-child(3){
+        fill:#FFA5A5 !important;
+      }
+      &:nth-child(5){
+        fill:#8FE2FF !important;
+      }
+    }
 `;

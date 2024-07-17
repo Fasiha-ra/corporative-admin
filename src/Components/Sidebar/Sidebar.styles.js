@@ -3,7 +3,7 @@ export const SidebarWrap = styled.div`
   height: calc(100vh - 134px);
   overflow: hidden;
   position: relative;
-  padding: 20px 20px;
+  /* padding: 20px 20px; */
   &:hover {
     overflow-y: auto;
   }
