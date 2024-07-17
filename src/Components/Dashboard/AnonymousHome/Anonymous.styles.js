@@ -126,7 +126,7 @@ export const AnalysisWrapper = styled.div`
       }
     }
   }
-  .wrap {
+  .lineChart {
     @media (min-width: 1360px) {
       flex-grow: 1;
       width: 100%;
@@ -135,58 +135,33 @@ export const AnalysisWrapper = styled.div`
     max-width: 600px;
     display: block;
     margin: 0 auto;
-    /* gap: 10px;
-    @media (min-width: 992px) {
-      display: flex;
-    } */
-    .progress {
-      background-color: var(--white);
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .hours {
-      display: block;
-      @media (min-width: 630px) {
-        display: flex;
-        gap: 10px;
+    .MuiChartsLegend-series {
+      &:nth-child(1) {
+        .MuiChartsLegend-mark {
+          fill: #8fe2ff !important;
+        }
       }
-      .card {
-        background-color: var(--white);
-        margin-bottom: 20px;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
-        padding: 15px;
-        .cardHead {
-          display: flex;
-          justify-content: space-between;
-          gap: 5px;
-          align-items: center;
-          padding-bottom: 20px;
+      &:nth-child(2) {
+        .MuiChartsLegend-mark {
+          fill: #009de2 !important;
+        }
+      }
+      &:nth-child(3) {
+        .MuiChartsLegend-mark {
+          fill: #0057e7 !important;
         }
       }
     }
-    .progressWrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 5px;
-      margin-bottom: 5px;
-      @media (min-width: 992px) {
-        margin-bottom: 30px;
+    .MuiLineElement-root {
+      &.MuiLineElement-series-auto-generated-id-0 {
+        stroke: #8fe2ff !important;
       }
-      .title {
-        width: 204px;
-        margin-bottom: 0;
-        @media (max-width: 992px) {
-          width: inherit;
-        }
+      &.MuiLineElement-series-auto-generated-id-1 {
+        stroke: #009de2 !important;
       }
-    }
-  }
-  .textWrap {
-    margin-bottom: 0;
-    @media (max-width: 992px) {
-      font-size: 14px !important;
+      &MuiLineElement-series-auto-generated-id-2 {
+        stroke: #0057e7 !important;
+      }
     }
   }
 `;

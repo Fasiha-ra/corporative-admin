@@ -87,7 +87,31 @@ const AnalysisSession = () => {
          ))}
         </div>
       </div>
-       <PieArcLabel />
+      <div className="barChart">
+      <PieArcLabel />
+      <div className="detailChart">
+        <div className="textWrap">
+          <div className="color"></div>
+          <span>Talent Management</span>
+        </div>
+        <div className="textWrap">
+          <div className="color"></div>
+          <span>Women Empowerment</span>
+        </div>
+        <div className="textWrap">
+          <div className="color"></div>
+          <span>Advisory Program</span>
+        </div>
+        <div className="textWrap">
+          <div className="color"></div>
+          <span>Employee Growth</span>
+        </div>
+        <div className="textWrap">
+          <div className="color"></div>
+          <span>Personal Development</span>
+        </div>
+      </div>
+      </div>
       </div>
     </AnalysisWrapper>
   );

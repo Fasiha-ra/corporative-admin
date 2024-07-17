@@ -7,13 +7,13 @@ export default function BasicLineChart() {
       xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
       series={[
         {
-          data: [2, 5.5, 2, 8.5, 1.5, 5], label:"data"
+          data: [0, 2, 4, 6, 3, 0], label:"Discussion"
         },
          {
-          data: [3, 6.5, 3, 9.5, 2.5, 6], label:"data 1"
+          data: [0, 4, 6, 4, 2.5, 0], label:"Question"
         },
          {
-          data: [4, 7.5, 2, 4.5, 3.5, 8], label:"data 2"
+          data: [0, 6, 6.5, 7, 3.5, 0], label:"Poll"
         },
       ]}
       width={500}
