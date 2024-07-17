@@ -33,6 +33,7 @@ import DeactivateEmployee from "./Components/EmployeeProfile/DeactivateEmployee"
 import ActivateEmployee from "./Components/EmployeeProfile/ActivateEmployee";
 import AllEmployee from "./Components/EmployeeProfile/AllEmployee";
 import Dashboard from "./Components/Dashboard";
+import CardProgress from "./Components/Dashboard/CardProgress";
 const App = () => {
   return (
     <AuthProvider>
@@ -46,6 +47,7 @@ const App = () => {
 
           <Route path="/" element={<AdminLayout />}>
           <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/CardProgress" element={<CardProgress/>}/>
           <Route path="/EmployeeProfile" element={<EmployeeProfile/>}>
           <Route path="/EmployeeProfile" element={<AllEmployee/>} />
           <Route path="/EmployeeProfile/DeactivateEmployee" element={<DeactivateEmployee/>} />

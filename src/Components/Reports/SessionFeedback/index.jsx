@@ -3,7 +3,6 @@ import Table from "../../Table";
 import { feedbackCol, feedbackData } from "../ReportData";
 import Modal from "../../Modal";
 import FeedbackPopup from "../FeedbackPopup";
-import { AnonymousWrap } from "../AnonymousForum/anonymous.styles";
 import { FeedbackWrap } from "./feedback.styles";
 
 const SessionFeedback = () => {
